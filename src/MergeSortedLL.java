@@ -19,11 +19,11 @@ public class MergeSortedLL {
        }
        Node head = new Node(0);
        Node temp = head;
-       while(n1!= null || n2!= null) {
+       while(n1!= null && n2!= null) {
            if (n2.data > n1.data) {
                temp.next = n1;
                temp = temp.next;
-               head = head.next
+               head = head.next;
            } else {
                temp.next = n2;
                temp = temp.next;
