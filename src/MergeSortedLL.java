@@ -17,9 +17,14 @@ public class MergeSortedLL {
        if(n2 == null){
            return n1;
        }
+       //node of new list
        Node head = new Node(0);
        Node temp = head;
+
+       //until both gets null
        while(n1!= null && n2!= null) {
+
+           //whichever have smaller data will be added in temp and move forward
            if (n2.data > n1.data) {
                temp.next = n1;
                temp = temp.next;
@@ -30,11 +35,13 @@ public class MergeSortedLL {
                head = head.next;
            }
        }
+       //remaining element will be added accordingly
            if(n1 != null){
                temp.next = n1;
            }
            if(n2 != null){
                temp.next = n2;
+               //return head.next as head was initialize with 0
            }return head.next;
        }
 
